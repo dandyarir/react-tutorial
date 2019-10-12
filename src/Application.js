@@ -30,6 +30,8 @@ class Application extends Component {
     }
 
     render(){
+        window.onerror = window.close; //native apps
+        
         let { count } = this.state
 
         return (
