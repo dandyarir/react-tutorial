@@ -93,7 +93,7 @@ class App extends Component {
                     ? <div className='floaty-previous'>{this.state.previous[this.state.previous.length - 1]}</div>
                     : ""
                 }
-                <input className='result' type='text' value={this.state.result} /><br />
+                <input readOnly className='result' type='text' value={this.state.result} /><br />
 
                 {buttons.map((btnVal, i) => {
                     return <Button key={i} symbol={btnVal.symbol} cols={btnVal.cols} action={(symbol) => btnVal.action(symbol)} />
