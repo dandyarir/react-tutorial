@@ -56,7 +56,8 @@ class App extends Component {
     }
 
     calculateOps = () => {
-        let { result, previous } = this.state;
+        let { result, previous, nextIsReset } = this.state;
+        if(nextIsReset) return
         if (previous.length > 0) {
             result = String(eval(String(previous[previous.length - 1] + result)));
             this.setState({ result, previous: [], nextIsReset: false })
